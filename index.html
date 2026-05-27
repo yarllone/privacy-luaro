@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luaro — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f6f3;
+      --border: #e8e5e0;
+      --text: #2f2f2f;
+      --muted: #9b9a97;
+      --accent: #2f2f2f;
+      --callout-bg: #f1f0ed;
+      --tag-bg: #efefef;
+      --link: #5b6d7c;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .page-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 40px 120px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--tag-bg);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .app-badge svg {
+      width: 14px; height: 14px;
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13.5px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item svg {
+      width: 13px; height: 13px;
+      flex-shrink: 0;
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+      background: var(--callout-bg);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      padding: 0;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 3px 0;
+      font-size: 14px;
+    }
+
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      min-width: 22px;
+    }
+
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .toc a:hover {
+      border-bottom-color: var(--border);
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 52px;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.05s; }
+    .section:nth-child(2)  { animation-delay: 0.10s; }
+    .section:nth-child(3)  { animation-delay: 0.15s; }
+    .section:nth-child(4)  { animation-delay: 0.20s; }
+    .section:nth-child(5)  { animation-delay: 0.25s; }
+    .section:nth-child(6)  { animation-delay: 0.30s; }
+    .section:nth-child(7)  { animation-delay: 0.35s; }
+    .section:nth-child(8)  { animation-delay: 0.40s; }
+    .section:nth-child(9)  { animation-delay: 0.45s; }
+    .section:nth-child(10) { animation-delay: 0.50s; }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 32px;
+    }
+
+    p {
+      font-size: 15.5px;
+      line-height: 1.75;
+      color: #4a4a4a;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 12px 0 14px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li, ol li {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: #4a4a4a;
+      padding: 5px 0 5px 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--muted);
+    }
+
+    /* Callout / highlighted block */
+    .callout {
+      background: var(--callout-bg);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14.5px;
+      color: #4a4a4a;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .callout-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Inline strong */
+    strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 52px 0;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+    }
+
+    .contact-block h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14.5px;
+      color: #4a4a4a;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-row:last-child { border-bottom: none; }
+
+    .contact-label {
+      min-width: 90px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    a:hover { opacity: 0.75; }
+
+    /* ── Footer ── */
+    .page-footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      font-style: italic;
+      color: #aaa;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page-wrapper { padding: 48px 24px 80px; }
+      h1 { font-size: 2rem; }
+      .meta { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="app-badge">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M5 8h6M5 5.5h4M5 10.5h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Luaro · iOS App
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="meta">
+        <span class="meta-item">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M5 1.5v3M11 1.5v3M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Last updated: April 06, 2026
+        </span>
+        <span class="meta-item">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M3 13c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Yaroslav Lishchynskyi
+        </span>
+      </div>
+    </header>
+
+     <div class="section">
+      <p>This Privacy Policy describes how users’ data is handled in Luaro (the "App", “Application”): an iOS app, operated by Yaroslav Lishchynskyi ("the Developer", "we," "us," or “ours”).</p>
+    </div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#no-personal-data">No Personal Data Collection</a></li>
+        <li><a href="#local-storage">Local Data Storage</a></li>
+        <li><a href="#family-controls">Apple Family Controls &amp; Screen Time</a></li>
+        <li><a href="#payments">Payments, Subscriptions &amp; RevenueCat</a></li>
+        <li><a href="#analytics">Third-Party Analytics</a></li>
+        <li><a href="#compliance">Global Compliance &amp; Your Rights</a></li>
+        <li><a href="#age">Age Requirements</a></li>
+        <li><a href="#retention">Data Retention &amp; Deletion</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- Sections -->
+    <main>
+
+      <div class="section" id="no-personal-data">
+        <span class="section-number">01</span>
+        <h2>Minimized Personal Data Collection</h2>
+        <div class="callout">
+          <span class="callout-icon">🔒</span>
+          <span>Luaro is designed to minimize data collection and does not collect directly identifying personal information such as your name, email address, or phone number.</span>
+        </div>
+        <ul>
+          <li>No account registration required.</li>
+          <li>We do not collect names, email addresses, phone numbers, or any other personal identifiers.</li>
+        </ul>
+      </div>
+
+      <div class="section" id="local-storage">
+        <span class="section-number">02</span>
+        <h2>Local Data Storage (On-Device)</h2>
+        <p>All data created or managed within the App is stored exclusively on your device:</p>
+        <ul>
+          <li><strong>Media Files:</strong> Images or videos you add are saved locally in the App's sandbox directory.</li>
+          <li><strong>App Settings:</strong> Your preferences are stored locally using iOS-native storage (UserDefaults, SwiftData).</li>
+          <li><strong>AppGroups:</strong> We use AppGroups to enable different parts of the app to work together on your device — such as the main app, blocking shields, and usage report widgets. This is a standard iOS feature that keeps all data on your device only.</li>
+        </ul>
+      </div>
+
+      <div class="section" id="family-controls">
+        <span class="section-number">03</span>
+        <h2>Apple Family Controls &amp; Screen Time Data</h2>
+        <p>The App uses Apple's native Family Controls, ManagedSettings, and DeviceActivity frameworks to provide its core functionality (blocking apps and displaying usage reports).</p>
+        <ul>
+          <li>We do not have access to your browsing history, specific app usage data, or any statistics.</li>
+          <li>All report views are generated and calculated in a separate process (Apple native Device Activity Report extension).</li>
+          <li><strong>Local Processing:</strong> All usage data is processed by the iOS operating system and presented to you via system-generated views. This information never leaves your device and is not accessible to the Developer.</li>
+        </ul>
+      </div>
+
+      <div class="section" id="payments">
+        <span class="section-number">04</span>
+        <h2>Payments, Subscriptions &amp; RevenueCat</h2>
+        <p>The App offers In-App Purchases and Subscriptions processed via trusted third-party services:</p>
+        <ul>
+          <li><strong>Apple App Store:</strong> All financial transactions are processed by Apple Inc. We do not collect or store credit card numbers, billing addresses, or any financial information. Your purchase history is managed by Apple according to their Privacy Policy.</li>
+          <li><strong>RevenueCat:</strong> We use RevenueCat (RevenueCat, Inc.) to facilitate subscription validation, receipt processing, and restoration of purchases.</li>
+        </ul>
+        <div class="callout">
+          <span class="callout-icon">ℹ️</span>
+          <span>When you make a purchase, only an automatically generated, anonymous identifier (App User ID) and transactional receipt data are shared with  <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>. This data is not used by us to personally identify you.</span>
+        </div>
+      </div>
+
+      <div class="section" id="analytics">
+        <span class="section-number">05</span>
+        <h2>Third-Party Analytics</h2>
+        <p>We use Apple's App Analytics, a built-in service provided by Apple. This service provides us with aggregated, anonymous data — such as number of downloads, app crashes, or sessions.</p>
+        <p>This data is only collected if you have opted in to share diagnostic and usage information with app developers in your iOS Settings.</p>
+      </div>
+
+      <div class="section" id="compliance">
+        <span class="section-number">06</span>
+        <h2>Global Compliance &amp; Your Rights</h2>
+        <p>Since we do not collect or store any personal data on our servers, most data protection rights (access, rectification, or deletion requests) are not applicable to our service.</p>
+        <p>However, you maintain full control over your local data and purchases:</p>
+        <ul>
+          <li>Delete all app data by deleting the App from your device.</li>
+          <li>Reset your settings within the App at any time.</li>
+          <li>Manage or cancel your subscription through your Apple ID account settings.</li>
+        </ul>
+        <div class="callout">
+          <span class="callout-icon">🌍</span>
+          <span>Luaro is designed to respect modern privacy standards. If you have questions about your rights under your local jurisdiction, contact us at <a href="mailto:support@luaro.app">support@luaro.app</a>.</span>
+        </div>
+      </div>
+
+      <div class="section" id="age">
+        <span class="section-number">07</span>
+        <h2>Age Requirements</h2>
+        <p>The App is intended for users aged 13 and older. We do not knowingly collect data from children under 13. Since the App does not collect personal data, age verification is not required.</p>
+        <p>If you are under 18, please ensure you have parental consent before making any in-app purchases. Parents and guardians: if you believe your child under 13 is using the App and you have concerns, please contact us at <a href="mailto:support@luaro.app">support@luaro.app</a>.</p>
+      </div>
+
+      <div class="section" id="retention">
+        <span class="section-number">08</span>
+        <h2>Data Retention &amp; Deletion</h2>
+        <p>All data stored by the App remains on your device indefinitely until you choose to delete it.</p>
+        <ul>
+          <p><strong>Device Deletion:</strong> When you delete the App, all locally stored data (settings, preferences, media files) is permanently removed.<p>
+        </ul>
+      </div>
+
+      <div class="section" id="changes">
+        <span class="section-number">09</span>
+        <h2>Changes to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. You will also be informed about changes within the App.</p>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="section contact-block" id="contact">
+        <span class="section-number">10</span>
+        <h2>Contact Us</h2>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a href="mailto:support@luaro.app">support@luaro.app</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Developer</span>
+          <span>Yaroslav Lishchynskyi</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">App</span>
+          <span>Luaro</span>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <span class="footer-brand">Luaro</span>
+      <span>© 2026 Yaroslav Lishchynskyi · All rights reserved</span>
+    </footer>
+
+  </div>
+</body>
+</html>
